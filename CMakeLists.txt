@@ -19,12 +19,16 @@ set(DOG_SOURCES
   ${CMAKE_CURRENT_SOURCE_DIR}/cpp/dog.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/cpp/ArrayInStruct1.h
   ${CMAKE_CURRENT_SOURCE_DIR}/cpp/ArrayInStruct2.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp/Vector.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp/Enums.h
 )
 
 set(BIND_SOURCES 
-${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/binding.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingArrayInStruct1.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingArrayInStruct2.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/binding.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingArrayInStruct1.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingArrayInStruct2.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingVector.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/javascript/binding/bindingEnums.cpp
 )
 
 add_executable(${PROJECT_NAME} 

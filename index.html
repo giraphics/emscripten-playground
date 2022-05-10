@@ -22,6 +22,7 @@
     
       // Test 3a
       var arrayInStruct = Module.emval_test_take_and_return_ArrayInStructNoArg();
+      console.log('arrayInStruct');
       console.log(arrayInStruct);
       //arrayInStruct.delete();
 
@@ -30,6 +31,10 @@
       // console.log(arrayInStruct2Param);
       // arrayInStruct2Param.delete();
       
+      // Test 4 Vector Tuple test
+      var tupleVector = Module.emval_test_return_TupleVector();
+      console.log('tupleVector');
+      console.log(tupleVector);
 
       hi.onclick = () => alert(dog.getGreeting())
       bark.onclick = () => dog.makeSound()
