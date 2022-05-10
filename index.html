@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C++ WASM Demo</title>
+</head>
+<body>
+  <span style="font-size: 50px;">🐶</span>
+  <button id="hi">Say hi</button>
+  <button id="bark">Bark (console)</button>
+  <script src="/build/my-dog.js"></script>
+  <script>
+    Module.addOnPostRun(() => {
+      // Test 1
+      const dog = new Module.Dog('Snoopy')
+
+      // Test 2
+      var person = Module.findPersonAtLocation([10.2, 156.5]);
+      console.log('Found someone! Their name is ' + person.name + ' and they are ' + person.age + ' years old');
+    
+      // Test 3a
+      var arrayInStruct = Module.emval_test_take_and_return_ArrayInStructNoArg();
+      console.log(arrayInStruct);
+      //arrayInStruct.delete();
+
+      // var arrayInStruct2Param = new Module.ArrayInStruct;
+      // //var arrayInStruct2 = Module.emval_test_take_and_return_ArrayInStruct([1, 2, [3, 4], [5, 6]]);
+      // console.log(arrayInStruct2Param);
+      // arrayInStruct2Param.delete();
+      
+
+      hi.onclick = () => alert(dog.getGreeting())
+      bark.onclick = () => dog.makeSound()
+    })
+  </script>
+</body>
+</html>

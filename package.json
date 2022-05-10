@@ -1,0 +1,13 @@
+{
+  "name": "wasm-class-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Parminder Singh",
+  "license": "MIT",
+  "scripts": {
+    "start": "sh ./run.sh && http-server ."
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
